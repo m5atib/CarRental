@@ -1,4 +1,4 @@
-﻿namespace CarRental
+﻿namespace CarRental.BL
 {
     class Program
     {
