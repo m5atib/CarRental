@@ -39,6 +39,24 @@ namespace CarRental.BL
         {
             get; set;
         }
+
+        public void Validate()
+        {
+            if (string.IsNullOrWhiteSpace(Make))
+                throw new ArgumentException("Make cannot be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(Model))
+                throw new ArgumentException("Model cannot be null or empty.");
+
+            if (Year < 1900 || Year > DateTime.Now.Year + 1)
+                throw new ArgumentException($"Year must be between 1900 and {DateTime.Now.Year + 1}.");
+
+            if (string.IsNullOrWhiteSpace(LicensePlate))
+                throw new ArgumentException("License plate cannot be null or empty.");
+
+            if (RentalPricePerDay <= 0)
+                throw new ArgumentException("Rental price per day must be greater than zero.");
+        }
     }
 
     public class Customer

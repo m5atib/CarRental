@@ -1,4 +1,5 @@
-﻿using CarRental.BL;
+﻿using System;
+using CarRental.BL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CarRental.Tests
@@ -65,6 +66,58 @@ namespace CarRental.Tests
 
             // Assert
             Assert.AreEqual(60.00m, car.RentalPricePerDay);
-        }  
+        }
+
+        [TestMethod]
+        public void Validate_ShouldPassForValidCar()
+        {
+            // Arrange
+            var car = new Car
+            {
+                CarId = 1,
+                Make = "Toyota",
+                Model = "Corolla",
+                Year = 2022,
+                LicensePlate = "ABC-1234",
+                RentalPricePerDay = 50.00m,
+                IsAvailable = true
+            };
+
+            // Act & Assert
+            car.Validate(); // Should not throw an exception
+        }
+
+        [TestMethod]
+        //[ExpectedException(typeof(ArgumentException))]
+        public void Validate_ShouldThrowExceptionForEmptyMake()
+        {
+            // Arrange
+            var car = new Car
+            {
+                CarId = 1,
+                Make = "",
+                Model = "Corolla",
+                Year = 2022,
+                LicensePlate = "ABC-1234",
+                RentalPricePerDay = 50.00m,
+                IsAvailable = true
+            };
+
+            // Act
+            // car.Validate();
+            // Assert handled by ExpectedException
+
+            try
+            {
+                // Act
+                car.Validate();
+                Assert.Fail("Expected ArgumentException was not thrown.");
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Make cannot be null or empty.", ex.Message);
+            }
+        }
+
     }
 }
