@@ -8,11 +8,13 @@ namespace CarRental.BL
 {
     public static class ExtensionsMethods
     {
-        public static bool IsInDateRange (this Car car)
+        [Obsolete]
+        public static bool IsInDateRange(this Car car)
         {
-            var  Year = car.Year;
+            var Year = car.Year;
 
-            return (Year < 1900 || Year > DateTime.Now.Year + 1);
+            return (Year > 1900 && Year < DateTime.Now.Year + 1);
         }
+
     }
 }

@@ -6,7 +6,6 @@ namespace CarRental.BL
     {
         static void Main(string[] args)
         {
-            Customer customer = new Customer();
         }
     }
     public class Car
@@ -18,11 +17,11 @@ namespace CarRental.BL
         public string Make
         {
             get; set;
-        } // e.g., Toyota, Ford
+        }
         public string Model
         {
             get; set;
-        } // e.g 2024, 2010
+        }
         public int Year
         {
             get; set;
@@ -38,6 +37,14 @@ namespace CarRental.BL
         public bool IsAvailable
         {
             get; set;
+        }
+
+        public Customer this[int index]
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public void Validate()
