@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{837D9245-D8D5-4B57-BFD7-F4EA20CA1E22}</ProjectGuid>
+    <ProjectGuid>{1014BD87-F36E-4C58-98E7-059B629EF938}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CarRental.BL</RootNamespace>
-    <AssemblyName>CarRental.BL</AssemblyName>
+    <RootNamespace>CarRental.Common</RootNamespace>
+    <AssemblyName>CarRental.Common</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,20 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="ExtensionsMethods.cs" />
-    <Compile Include="LoggingService.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CarRental.Common\CarRental.Common.csproj">
-      <Project>{1014BD87-F36E-4C58-98E7-059B629EF938}</Project>
-      <Name>CarRental.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
