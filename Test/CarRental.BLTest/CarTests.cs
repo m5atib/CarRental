@@ -31,13 +31,13 @@ namespace CarRental.Tests
             Assert.AreEqual(50.00m, car.RentalPricePerDay);
             Assert.IsTrue(car.IsAvailable);
             Assert.IsTrue(car.IsInDateRange());
-        }
+         }
 
         [TestMethod]
         public void Car_ShouldAllowUpdatingAvailability()
         {
             // Arrange
-            var car = new Car
+            var car = new Customer
             {
                 CarId = 1,
                 Make = "Toyota",
@@ -56,7 +56,7 @@ namespace CarRental.Tests
         public void Car_ShouldAllowUpdatingRentalPrice()
         {
             // Arrange
-            var car = new Car
+            var car = new Customer
             {
                 CarId = 1,
                 RentalPricePerDay = 50.00m
@@ -73,7 +73,7 @@ namespace CarRental.Tests
         public void Validate_ShouldPassForValidCar()
         {
             // Arrange
-            var car = new Car
+            var car = new Customer
             {
                 CarId = 1,
                 Make = "Toyota",
@@ -93,7 +93,7 @@ namespace CarRental.Tests
         public void Validate_ShouldThrowExceptionForEmptyMake()
         {
             // Arrange
-            var car = new Car
+            var car = new Customer
             {
                 CarId = 1,
                 Make = "",
