@@ -8,10 +8,10 @@ namespace CarRental.Common
 {
     public interface ILogger
     {
-        void Info(string message);
+        string Info();
 
-        void Error(string message);
+        string Error();
 
-        void Warn(string message);
+        string Warn();
     }
 }

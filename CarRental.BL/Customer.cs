@@ -34,17 +34,17 @@ namespace CarRental.BL
             get; set;
         }
 
-        public void Error(string message)
+        public string Error()
         {
             throw new NotImplementedException();
         }
 
-        public void Info(string message)
+        public string Info()
         {
             throw new NotImplementedException();
         }
 
-        public void Warn(string message)
+        public string Warn()
         {
             throw new NotImplementedException();
         }
