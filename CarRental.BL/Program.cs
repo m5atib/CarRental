@@ -6,7 +6,6 @@ namespace CarRental.BL
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
         }
     }
     public class Car

@@ -30,6 +30,7 @@ namespace CarRental.Tests
             Assert.AreEqual("ABC-1234", car.LicensePlate);
             Assert.AreEqual(50.00m, car.RentalPricePerDay);
             Assert.IsTrue(car.IsAvailable);
+            Assert.IsTrue(car.IsInDateRange());
         }
 
         [TestMethod]
