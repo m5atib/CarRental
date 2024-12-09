@@ -6,6 +6,7 @@ namespace CarRental.BL
     {
         static void Main(string[] args)
         {
+            Customer customer = new Customer();
         }
     }
     public class Car

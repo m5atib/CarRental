@@ -37,7 +37,7 @@ namespace CarRental.Tests
         public void Car_ShouldAllowUpdatingAvailability()
         {
             // Arrange
-            var car = new Customer
+            var car = new Car
             {
                 CarId = 1,
                 Make = "Toyota",
@@ -56,7 +56,7 @@ namespace CarRental.Tests
         public void Car_ShouldAllowUpdatingRentalPrice()
         {
             // Arrange
-            var car = new Customer
+            var car = new Car
             {
                 CarId = 1,
                 RentalPricePerDay = 50.00m
@@ -73,7 +73,7 @@ namespace CarRental.Tests
         public void Validate_ShouldPassForValidCar()
         {
             // Arrange
-            var car = new Customer
+            var car = new Car
             {
                 CarId = 1,
                 Make = "Toyota",
@@ -93,7 +93,7 @@ namespace CarRental.Tests
         public void Validate_ShouldThrowExceptionForEmptyMake()
         {
             // Arrange
-            var car = new Customer
+            var car = new Car
             {
                 CarId = 1,
                 Make = "",

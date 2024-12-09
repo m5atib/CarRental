@@ -7,7 +7,7 @@ using CarRental.Common;
 
 namespace CarRental.BL
 {
-    public class Customer :ILogger
+    public class Customer : ILogger
     {
         public int CustomerId
         {
@@ -15,13 +15,15 @@ namespace CarRental.BL
         }
         public string FirstName
         {
-            get; set;
+            get; 
+            set => field = value.Trim();
         }
+
         public string LastName
         {
             get; set;
         }
-        public string Email
+        public string? Email
         {
             get; set;
         }
@@ -31,7 +33,7 @@ namespace CarRental.BL
         }
         public string DriverLicenseNumber
         {
-            get; set;
+            get; private set;
         }
 
         public string Error()
