@@ -6,6 +6,17 @@ namespace CarRental.BL
     {
         static void Main(string[] args)
         {
+            var customersList = new GenericProcessor<Customer>();
+            customersList.Add(new Customer
+            {
+                FirstName = "Muhaimen"
+            });
+            customersList.Add(new Customer
+            {
+                FirstName = string.Empty,
+            });
+
+
         }
     }
     public class Car

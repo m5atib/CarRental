@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="GenericProcessor.cs" />
     <Compile Include="CustomerRepo.cs" />
     <Compile Include="ExtensionsMethods.cs" />
+    <Compile Include="LINQExercises.cs" />
     <Compile Include="LoggingService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
